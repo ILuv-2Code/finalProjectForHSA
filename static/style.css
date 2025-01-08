@@ -1,0 +1,44 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    margin-top: auto;
+}
+
+
+.center{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.desiredFont{
+
+    color: #FF7700;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.desiredFontNoColor{
+
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+/* Javascript Password Generator*/
+
+.box {
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+    align-self:center;
+    flex-direction: column;
+
+    height: 150px;
+    width: 300px;
+    margin-top: 50px;
+    
+}
