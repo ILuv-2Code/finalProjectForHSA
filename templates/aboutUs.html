@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Final Project</title>
+
+    <!-- Links -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- Make it Look Nice -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+</head>
+
+<body style="background-color: black;">
+
+        <div style="background-color: darkorange; color: black !important;"class="container-fluid py-3 center desiredFont">
+          <h1 class="display-5 fw-bold"><center>About Us</center> <h3><br> &nbsp;To Whom it May Concern</h3></h1>
+        </div>
+
+    <div class="desiredFont center container">
+        <div class="row" style="display: flex; align-items: center;"> 
+            <div class="col-sm center"> 
+                <h2><center>We're Just Some People Who Like Hacking</center></h2>
+                <br>
+                <h4 class="center"><center>Wanting to provide somewhat modern technology to modern-day script kiddies and professionls alike. Since 2023, we've had a goal of providing everyone the tools and equipment to practice hacking.</center></h4>
+                <br>
+                <br>
+                <h4 class="center"><center>We also like the color orange...</center></h4>
+            </div>
+            <div class="col-sm" style="display: flex; flex-direction: column; align-items: center; align-content: space-between; margin-top: 50px;">
+                <iframe width="655" height="368" src="https://www.youtube.com/embed/nA1dXR7im7o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Javascript Password Generator -->
+    <script>
+        var password = document.getElementById("password");
+        
+        function passwordGenerate() {
+
+            var pass = '';
+
+            var values = 'abcdefghijklmnopqretuswxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-+=~/';
+
+            for (let i = 0; i<12; i++) {
+                var char = Math.floor(Math.random() * values.length + 1)
+
+                pass += values.charAt(char)
+            }
+            return pass;
+        }
+
+        function passwordAdd() {
+            password.innerHTML = passwordGenerate()
+
+        }
+
+    </script>
+
+    <div class="box desiredFont" style="color: black !important;">  
+        <h4><center>Password Generator</center></h4>
+            <center><p id="password"></p></center>
+            <center><button style="margin-top: 20px;" onclick="passwordAdd()">Generate</button></center>
+
+    </div>
+
+
+    
+    <footer style="background-color: darkorange; color: black !important;" class="desiredFont center">&nbsp;<br><p><a href="/" style="color:black !important;" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Home</a></p> <br>&nbsp;</footer>
+</body>
+</html>
