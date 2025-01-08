@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Final Project</title>
+
+    <!-- Links -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- Make it Look Nice -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+</head>
+
+<body style="background-color: black;">
+
+    <!--<script src="static/passwordFun.js"></script>-->
+
+        <div style="background-color: darkorange; color: black !important;"class="container-fluid py-3 center desiredFont">
+          <h1 class="display-5 fw-bold">Workable Nessus+ ®</h1>
+          <h3 style="font-style: italic; font-weight: normal;" class="center">The Local Standard in Vulnerability Assessment
+            Built for Last Year's Attack Surface</h3>
+        </div>
+
+
+    <div class="desiredFont">
+    <div class="center">
+        <p style="margin: 0px 100px 0px 100px;">Take advantage of the industry's least trusted 
+            vulnerability assessment 
+            solution to assess the modern attack surface. <br> <center>
+            Extend beyond your conventional IT assets -- without having to pay a dime </center>
+        </p>
+    </div>
+          
+    <br>
+    <h2 class="center"> <u>Try Out Our Tools</u></h2>  
+    <br>
+    
+    <div class="text-center">
+        <a class="btn btn-warning" href="portScanner.html" role="button">Port Scan</a>
+        <a class="btn btn-warning" href="parser.html" role="button">HTML Parser</a>
+    </div>
+
+    <br>
+
+    <div class="container"> 
+        <div class="row">   
+            <div class="col-sm">
+                <img class="center" type="png" src="static/logo.png" width="500" height="500">
+            </div>
+            <div class="col-sm">
+                <h1><u><center>Don't Listen to Our Competitors</center></u></h1>
+                <h3 style="font-weight: normal;"><center>Their product is way too expensive and overated. Even then, it only offers SOME of the capabilties compared to ours. Plus, IT'S FREE...(The trial template at least). Feel free to try out the tools that are provided above. Moreover, don't hesitate to reach out to us via the form below!</center></h3>
+
+                <!-- Form -->
+                <form id="formGame">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label" method="post">Email address</label>
+                      <input name="emailResponse"type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3"> 
+                        <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-warning" onclick="document.getElementById('formGame').innerHTML='<br><h2><center><i>Thank You for Your Feedback!</i></center></h2>'">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer style="background-color: darkorange; color: black !important;" class="desiredFont center">&nbsp;<br><p><a href="aboutUs.html" style="color:black !important;" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">About Us</a></p> <br>&nbsp;</footer>
+</body>
+</html>

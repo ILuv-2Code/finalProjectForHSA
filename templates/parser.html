@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    </head>
+
+    <body style="background-color: black"> 
+        <br>
+        <h1 class="desiredFont center"><u>HTML Parser</u></h1>
+        <br>
+        <div class="text-center">
+            <a class="btn btn-warning" href="/" role="button">Home</a>
+            <a class="btn btn-warning" href="portScanner.html" role="button">Port Scan</a>
+            <br>
+            <br>
+
+            <form action="{{ url_for('parser') }}" method="post">
+                <label class="desiredFont" for="website_Link">Insert Website Link: </label>
+                <input type="text" id="website_Link" name="parce_Link" class="desiredFont" style="color: orange; background-color: black; border-color: orange; width: 1000px;">
+            </form>
+
+            <br>
+            <table class="table table-bordered border border-warning desiredFont">
+                <tr class="table-active">
+                    <th style="background-color: orange;">Website</th>
+                    <td style="background-color: orange;">{{ websitePOSTED }}</td>
+                </tr>
+                <tr>
+                    <th style="background-color: orange;">Links</th>
+                    <td style="background-color: orange;">{{ linksPOSTED }}</th>
+
+                </tr>
+                <tr class="table-active">
+                    <th  style="background-color: orange;">Phone</th>
+                    <td style="background-color: orange;">{{ phonePOSTED }}</td>
+                </tr>
+                <tr>
+                    <th style="background-color: orange;">Email</th>
+                    <td style="background-color: orange;">{{ emailPOSTED }}</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div style="margin-top: 100px;" class="desiredFont center">
+            <h2><u>How it Works</u></h2>
+            <p><center style="margin-left: 30px; margin-right: 30px;"> HTML scraping, also known as web scraping, is the process of extracting data 
+                from websites directly from their HTML source code. 
+                Python provides various libraries and tools that make web scraping easy and efficient. 
+                The libraries used for web scraping in this Python scrupt are requests (for making HTTP requests) and BeautifulSoup 
+                (for parsing HTML). <a href="https://www.geeksforgeeks.org/python-web-scraping-tutorial/">Read More</a></center></p>
+
+
+
+        </div>
+
+    </body>
+</html>
